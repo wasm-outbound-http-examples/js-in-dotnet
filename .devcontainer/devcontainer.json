@@ -1,0 +1,10 @@
+{
+	"name": "JS in .NET: HTTP request from WASM",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-dotnettools.csharp"
+			]
+		}
+	}
+}
