@@ -4,7 +4,7 @@
 
 Tested with .Net version 8.0.402, Jint [v4.0.3](https://github.com/sebastienros/jint/releases/tag/v4.0.3).
 
-> [!INFO]
+> [!NOTE]
 > Note that printing to console currently is made from C# code. Returning the result to JS by using `result.UnwrapIfPromise()`
 > looks like still impossible, probably due to [`Error: Cannot wait on monitors on this runtime.`](https://github.com/dotnet/runtime/issues/51115#issuecomment-817805961).
 
@@ -40,10 +40,12 @@ dotnet new wasmbrowser
 dotnet add package Jint --version 4.0.3
 ```
 
-4. Replace generated HelloWorld-like `Program.cs` with HTTP-enabled one:
+4. Replace generated HelloWorld-like `Program.cs` and `wwwroot` contents with HTTP-enabled ones:
 
 ```sh
 cp ../Program.cs ./
+cp ../index.html ./wwwroot/
+cp ../main.js ./wwwroot/
 ```
 
 5. Compile the example:
